@@ -1,0 +1,17 @@
+﻿@model Sneakers.Core.Data.ViewModels.SneakerListViewModel
+
+
+
+
+<div class="container-fluid">
+    <div class="row row-cols-1 row-cols-md-3">
+
+        @foreach (var sneaker in Model.Sneakers)
+        {
+            <partial name="_CardSneaker" model="@sneaker" />
+
+        }
+
+    </div>
+</div>
+

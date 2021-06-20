@@ -1,0 +1,19 @@
+﻿@model SneakerListViewModel
+@{
+    ViewData["Title"] = "Accueil Page";
+}
+
+<h1>Notre selection</h1>
+<div class="container-fluid">
+    <div class="row">
+
+        @foreach (var sneaker in Model.Sneakers)
+        {
+
+
+              <partial name="_CardSneaker" model="@sneaker" />
+
+        }
+
+    </div>
+</div>

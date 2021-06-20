@@ -1,0 +1,24 @@
+﻿@model Sneakers.Core.Data.Models.Sneaker
+
+
+<div class="col-sm-4 col-lg-4 col-md-4">
+    <div class="card" style="width: 18rem;">
+        <img src="@Model.ImageUrl" width="300" height="300" alt="...">
+        <div class="card-body">
+            <h5 class="card-title"><a asp-controller="Sneaker" asp-action="Details" asp-route-idSneaker="@Model.SneakerId"> @Model.SneakerName</a></h5>
+            <p class="card-text">@Model.ShortDescription</p>
+
+            <div class="row">
+                <div class="col">
+                    <a href="#" class="btn btn-primary">@Model.Price.ToString("C")</a>
+                </div>
+                <div class="col">
+                    <a asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-idSneaker="@Model.SneakerId">Ajouter au panier</a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+</div>
+
